@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      padding:0px;
+      margin:0px;
+
+    }
+    
+    .main{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .head{
+      background-image: url("images/bg-hero-desktop.svg");
+    }
+    .head,img{
+      padding:10px;
+    }
+  .head1 button{
+    font-weight: bold;
+    position:relative;
+    left:65%;
+    bottom:30px;
+    border-radius: 75px;
+    width:150px;
+    padding:15px;
+    background-color:white;
+    border: 2px solid whitesmoke;
+  }
+  .section{
+    display: flex;
+    flex-direction:row;
+    
+  }
+  .section1{
+    width: 30%;
+    margin-top: 40px;
+  }
+  .section1 h1,pre{
+    margin:25px;
+  
+  }
+  .section1 button{
+    font-weight: bold;
+    margin-left: 25px;
+    margin-top: 30px;
+    border-radius: 50px;
+    padding:15px;
+    background-color:  hsl(322, 100%, 66%);
+    border-color:  hsl(322, 100%, 66%);
+    color:white;
+    
+  }
+  .section2{
+    margin-left: 20%;
+  }
+  .details{
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .detail1{
+    width:80%;
+    margin-left:10%;
+    margin-top: 5%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border:2px solid whitesmoke;
+  }
+  .grow{
+    width:45%;
+  }
+  .grow h2{
+    padding-left:40px;
+  }
+  .grow p{
+    margin-left:40px;
+    margin-top: 20px;
+  }
+  .detail1-img{
+    margin-left: 25%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+  }
+  .detail2{
+    width:80%;
+    margin-left:10%;
+    margin-top: 5%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border:2px solid whitesmoke;
+  }
+  .flow{
+    width:50%;
+  }
+  .flow h2,p{
+    margin-left:25%;
+    margin-top: 20px;
+  }
+  .detail2-img{
+    margin-left: 25%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+  }
+  .detail3{
+    width:80%;
+    margin-left:10%;
+    margin-top: 5%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border:2px solid whitesmoke;
+  }
+  .users{
+    width:45%;
+  }
+  .users h2{
+    padding-left:40px;
+  }
+  .users p{
+    margin-left:40px;
+    margin-top: 20px;
+  }
+  .detail3-img{
+    margin-left: 25%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+  }
+  .community{
+    position: relative;
+    top:70px;
+    width:40%;
+    border:2px solid whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top:20px;
+    text-align: center;
+    margin-left:30%;
+    margin-bottom:20px;
+    z-index: 3;
+    background-color: white;
+   }
+  .community button{
+    font-weight: bold;
+    width:40%;
+    padding:15px;
+    margin:10px;
+    border-radius: 50px;
+    background-color:  hsl(322, 100%, 66%);
+    border-color:  hsl(322, 100%, 66%);
+    color:white;
+  }
+  .footer{
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    width:100%;
+    background-color:  hsl(192, 100%, 9%);
+    color:white;
+    z-index: 2;
+    
+  }
+  .contact{
+    
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    
+  }
+  .contact img{
+    display: inline;
+    float: left;
+  }
+  .icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .icons span{
+    padding:10px;
+  }
+  .about{
+    display:flex;
+    flex-direction: row;
+    margin-top: 150px;
+  }
+   li{
+    margin-top: 10px;
+    margin-left: 50px;
+    list-style: none;
+    padding:10px;
+    
+  }
+  li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+
+  }
+  button:hover{
+    cursor: pointer;
+  }
+  .icon{
+    margin-top: 150px;
+    margin-left: 50px;
+    padding-left: 10px;
+  }
+  .icon footer{
+    margin-top:150px;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="head">
+      <div class="head1">
+      <img src="images/logo.svg" alt="logo">
+      <button>Try It Free</button>
+    </div>
+      <div class="section">
+        <div class="section1">
+        <h1> Build The Community Your Fans Will Love</h1>
+          <pre>Huddle re-imagines the way we build communities. You have
+a voice, but so does your audience.Create connections with
+your users as you engage in genuine discussion.</pre>
+          <button>Get Started For Free </button>
+        </div>
+      <div class="section2">
+        <img src="images/illustration-mockups.svg" alt="mockups" width="600px" height="400px">
+      </div>
+    </div>
+  </div>
+    <div clas="details">
+      <div class="detail1">
+        <div class="grow">
+        <h2>Grow Together</h2>
+        <p>Generate meaningful discussions with your audience and build a strong, loyal community. 
+          Think of the insightful conversations you miss out on with a feedback form.</p>
+        </div>  
+          <div class="detail1-img">
+            <img src="images/illustration-grow-together.svg" alt="Grow Together" width="250px" height="250px">
+          </div>
+      
+        </div>
+        <div class="detail2">
+           
+          <div class="detail12-img">
+            <img src="images/illustration-flowing-conversation.svg" alt="Flow Conversations" width="250px" height="250px">
+          </div>
+          <div class="flow"> 
+            <h2>Flowing Conversations</h2>
+            <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads 
+              have just-in-time loading for a more natural flow.</p>
+            </div>
+          
+      
+        </div>
+        <div class="detail3">
+          <div class="users"> 
+            <h2>Your Users</h2>
+            <p>It takes no time at all to integrate Huddle with your app's authentication solution. 
+              This means, once signed in to your app, your users can start chatting immediately.</p>
+            </div>
+            <div class="detail3-img">
+              <img src="images/illustration-your-users.svg" alt="Your Users" width="250px" height="250px">
+            </div>
+        </div>
+        <div class="community">
+          <h2>Ready To Build Your Community?</h2>
+          <button>Get Started For Free</button>
+        </div>
+        <div class="footer">
+          <div class="contact">
+            <img src="images/logo1.svg" alt="logo">
+            <div class="icons">
+            <img src="images/icon-location.svg" alt="icon-location" width="20px" height="20px">
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+              incididunt ut labore et dolore magna aliqua</span>
+            </div>
+            <div class="icons">
+              <img src="images/icon-phone.svg" alt="icon-phone" width="20px" height="20px">
+              <span>+1-543-123-4567</span>
+            </div>
+            <div class="icons">
+              <img src="images/icon-email.svg" width="20px" height="20px">
+              <span>example@huddle.com</span>
+            </div>
+          </div>
+          <div class="about">
+            <div class="about-1">
+              <ul>
+              <li> About Us</li>
+                <li>What We Do</li>
+                <li>FAQ</li>
+              </ul>
+            </div>
+            <div class="about-2">
+              <ul>
+                <li>Career</li>
+                <li>Blog</li>
+                <li>Contact Us</li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="icon">
+            <img src="#" alt="facebook" width="10px" height="10px">
+            <img src="#" alt="twitter" width="10px" height="10px">
+            <img src="#" alt="instagram" width="10px" height="10px">
+           <footer>&copy; Copyright 2018 Huddle. All rights reserved.</footer> 
+          </div>
+        </div>
+      
+    </div>
+    
+  
+</body>
+</html>
